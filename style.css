@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+}
+.nav{
+    height: 110px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    /* background-color: blue; */
+    justify-content: space-between;
+    z-index: 50;
+    
+
+}
+.nav h1 {
+    margin: 10px 25px;
+    font-weight: 800;
+    font-size: 80px;
+    -webkit-text-stroke: 3px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    
+}
+.nav .list1{
+    list-style: none;
+    display: flex;
+    font-size: 40px;
+    margin: 32px;
+}
+.nav ul li{
+    margin: 0px 10px;
+    font-weight: 800;
+  
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+}
+img{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.list{
+    display: none;
+}
+
+@media (max-width:990px) {
+    .nav .list1{
+        display: none;
+    }
+    img{
+        display: block;
+        height: 60px;
+        width: 70px;
+        margin: 25px 35px;
+    }
+    .hidden{
+        right: -100%;
+        display: block;
+        margin-top: 100px;
+        height: 84vh;
+        width: 97vw;
+        background-color: rgba(58, 58, 58, 0.416);
+        z-index: 9;
+        position: absolute;
+        box-shadow: 50px;
+        border-radius: 10px;
+        margin-top:100px;
+        margin-left: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    .list{
+        right: -100%;
+        height: 95vh;
+        width: 97vw;
+        border-radius: 10px;
+        margin-top:10px;
+        margin-right: 22px;
+        display:block;
+        display: flex;
+        position: absolute;
+        z-index: 99;
+        flex-direction: column;       
+        display: flex;
+        font-size: 70px;
+        justify-content:center;
+        align-items: center;     
+    }
+    .list ul li{
+        list-style: none;
+        margin: 40px;
+        text-align: center;
+    }
+}
+#toggle{
+    filter: invert(1);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+}
+.lander{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: beige;
+}
+.lander video{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.main{
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+.page2{
+   
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
