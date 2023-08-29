@@ -48,7 +48,7 @@ gsap.to(".move-left",{
     scrollTrigger:{
         trigger:".move-left",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"-130%",
         end:"-50%",
         scrub:2,
@@ -60,7 +60,7 @@ gsap.to(".move-right",{
     scrollTrigger:{
         trigger:".move-left",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"-130%",
         end:"-50%",
         scrub:2,
