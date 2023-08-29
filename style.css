@@ -8,6 +8,10 @@ html,body{
     width: 100%;
     /* overflow: hidden; */
 }
+@font-face {
+    font-family: myFirstFont;
+    src: url(Teko-VariableFont_wght.ttf);
+  }
 .nav{
     height: 110px;
     width: 100%;
@@ -15,32 +19,64 @@ html,body{
     position: fixed;
     /* background-color: blue; */
     justify-content: space-between;
-    z-index: 50;
-    
+    z-index: 99;
+    color: black;
+    mix-blend-mode: difference;
 
 }
 .nav h1 {
-    margin: 10px 25px;
+    margin: 0px 25px;
     font-weight: 800;
     font-size: 80px;
-    -webkit-text-stroke: 3px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    z-index: 1;
+    font-family: myFirstFont;
+    /* -webkit-text-stroke: 3px rgb(255, 255, 255);
+    color: rgb(0, 0, 0); */
+    z-index: 10;
+    padding: 0;
+    color: rgb(255, 255, 255);
+   
+    
+   
+    
+}
+.page2{
+    color: rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+.content2{
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 10;
     
 }
 .nav .list1{
     list-style: none;
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     margin: 32px;
 }
 .nav ul li{
     margin: 0px 10px;
     font-weight: 800;
-  
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    font-family: myFirstFont;
+    /* -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgb(0, 0, 0); */
+    color: white;
+    /* font-size: 5; */
     
+}
+.nav ul li:hover{
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 25px;
 }
 img{
     display: none;
@@ -51,23 +87,51 @@ img{
 .list{
     display: none;
 }
+.page1 h1{
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    margin: -18px;
+    font-family: myFirstFont;
+    position: fixed;
+}
+.move-left{
+    top: 42%;
+    right: 32%;
+}
+.move-right{
+    /* top: 42%; */
+    right: 30%;
+}
 
-@media (max-width:990px) {
+.content{
+    margin-top: 78px;
+}
+@media (max-width:360px) {
     .nav .list1{
         display: none;
     }
+    .nav{
+        /* background: rgb(255, 3, 3); */
+        height: 90px;
+    }
+    .nav h1{
+
+        font-size: 50px;
+        margin: 18px 20px;
+    }
+    
     img{
         display: block;
-        height: 60px;
-        width: 70px;
-        margin: 25px 35px;
+        height: 40px;
+        width: 50px;
+        margin: 26px 55px;
     }
-    .hidden{
-        right: -100%;
+   .hidden{
+        right: -31%;
         display: block;
-        margin-top: 100px;
+        margin-top: 190px;
         height: 84vh;
-        width: 97vw;
+        width: 31vw;
         background-color: rgba(58, 58, 58, 0.416);
         z-index: 9;
         position: absolute;
@@ -77,16 +141,18 @@ img{
         margin-left: 10px;
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-    }
-    .list{
-        right: -100%;
-        height: 95vh;
-        width: 97vw;
+    } 
+   .list{
+
+        right: -30%;
+        height: 97vh;
+        width: 30vw;
         border-radius: 10px;
         margin-top:10px;
         margin-right: 22px;
         display:block;
         display: flex;
+        flex-wrap: nowrap;
         position: absolute;
         z-index: 99;
         flex-direction: column;       
@@ -98,7 +164,87 @@ img{
     .list ul li{
         list-style: none;
         margin: 40px;
+        font-size: 40px;
         text-align: center;
+    }
+}
+@media (max-width:1180px) {
+    .nav .list1{
+        display: none;
+    }
+    .move-left {
+        font-size: 50px;
+        color: aqua;
+    }
+    .nav{
+        /* background: rgb(255, 3, 3); */
+        height: 90px;
+    }
+    .nav h1{
+
+        font-size: 50px;
+        margin: 18px 20px;
+    }
+    
+    img{
+        display: block;
+        height: 40px;
+        width: 50px;
+        margin: 26px 55px;
+    }
+   .hidden{
+        right: -31%;
+        display: block;
+        margin-top: 190px;
+        height: 84vh;
+        width: 31vw;
+        background-color: rgba(58, 58, 58, 0.416);
+        z-index: 9;
+        position: absolute;
+        box-shadow: 50px;
+        border-radius: 10px;
+        margin-top:100px;
+        margin-left: 10px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    } 
+   .list{
+
+        right: -30%;
+        height: 97vh;
+        width: 30vw;
+        border-radius: 10px;
+        margin-top:10px;
+        margin-right: 22px;
+        display:block;
+        display: flex;
+        flex-wrap: nowrap;
+        position: absolute;
+        z-index: 99;
+        flex-direction: column;       
+        display: flex;
+        font-size: 70px;
+        justify-content:center;
+        align-items: center;     
+    }
+    .list ul li{
+        list-style: none;
+        margin: 40px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .page1 h1{
+        color: white;
+        /* font-size: 25px; */
+        font-family: myFirstFont;
+        
+    }
+    .page1 .content .move-left{
+        right: 27%;
+        
+    }
+    .move-right{
+        right: 24%;
     }
 }
 #toggle{
@@ -131,15 +277,12 @@ section{
     flex-direction: column;
     position: relative;
 }
-.page2{
-   
+
+.page1{
+    margin-top: -100vh;
     height: 100vh;
     width: 100%;
-    z-index: 10;
-}
-#page1{
-    height: 100vh;
-    width: 100%;
+    /* background-color: rgb(0, 255, 21); */
     position: relative;
     display: flex;
     justify-content: center;
@@ -148,3 +291,8 @@ section{
     text-align: center;
     z-index: 10;
 }
+/* .page1 h1{
+    color: white;
+    font-size: 100px;
+    font-family: myFirstFont;
+} */
