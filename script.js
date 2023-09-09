@@ -1,82 +1,34 @@
-var toggle = document.querySelector("#toggle")
-var options = document.querySelector(".hidden")
-var options1 = document.querySelector(".list")
-var b = document.querySelector("body")
-var check = 1;
-toggle.addEventListener("click",function(){
-    if(check == 1){   
-        gsap.to(options,{       
-            x :"-101%",
-            y: "5px",
-        })
-        gsap.to(options1,{
-            x :"-100%",    
-        })
-        check = 0;
-        
-    }   
-})
-options1.addEventListener("click",function(){
-    if(check == 0){   
-        gsap.to(options,{       
-            x :"101%",
-            y: "5px",
-        })
-        gsap.to(options1,{
-            x :"100%",    
-        })
-        check =1;
-    }   
+var crsr = document.querySelector("#cursor")
+var blur = document.querySelector("#cursor-blur")
+document.addEventListener("mousemove",function(dets){
+    crsr.style.left = dets.x+"px"
+    crsr.style.top = dets.y+"px"
+    blur.style.left =dets.x - 250 +"px"
+    blur.style.top = dets.y - 250 +"px"
 })
 
-// gsap.to("#nav",{
-//     backgroundColor : "black",
-//     height:"110px",
-//     duration:0.2,
-//     scrollTrigger:{
-//         trigger:"#nav",
-//         scroller:"body",
-//         // markers:true,
-//         start:"top -10%",
-//         end:"top -11%",
-//         scrub:2,
-//     }
-// })
-gsap.to(".move-left",{
-    x: "-180vw",
-    duration:0.3,
+
+gsap.to("#nav",{
+    backgroundColor : "blue",
+    height:"100px",
+    duration:0.2,
     scrollTrigger:{
-        trigger:".move-left",
+        trigger:"#nav",
         scroller:"body",
-        // markers:true,
-        start:"-130%",
-        end:"-50%",
+        markers:true,
+        start:"top -10%",
+        end:"top -11%",
         scrub:2,
     }
 })
-gsap.to(".move-right",{
-    x: "180vw",
-    duration:0.3,
+gsap.to("#main",{
+    backgroundColor:"#000",
     scrollTrigger:{
-        trigger:".move-left",
+        trigger:"#main",
         scroller:"body",
-        // markers:true,
-        start:"-130%",
-        end:"-50%",
-        scrub:2,
-    }
-})
-gsap.to(".main",{
-    backgroundColor:"black",
-   // opacity:0.8,
-    blur:"3px",
-    scrollTrigger:{
-        trigger:".main",
-        scroller:"body",
-        // marker:true,
-        
-        start:"center",
-        end:"bottem",
+       marker:true,
+        start:"top -25%",
+        // end:"top -70%",
         scrub:2,
     }
 })
